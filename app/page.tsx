@@ -3,7 +3,7 @@ import Companies from './components/Companies/Companies';
 import Courses from './components/Courses/index';
 import Mentor from './components/Mentor/index';
 import Testimonials from './components/Testimonials/index';
-import Newsletter from './components/Newsletter/Newsletter';
+import ContacUs from './components/ContacUs/ContacUs';
 import NextEnroll from './components/NextEnroll/NextEnroll';
 
 
@@ -16,7 +16,7 @@ export default function Home() {
       <Courses />
       <Mentor />
       <Testimonials />
-      <Newsletter />
+      <ContacUs />
     </main>
   )
 }

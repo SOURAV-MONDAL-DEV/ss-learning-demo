@@ -17,8 +17,9 @@ const navigation: NavigationItem[] = [
     { name: 'Home', href: '#/', current: true },
     { name: 'Courses', href: '#courses', current: false },
     { name: 'Mentor', href: '#mentor', current: false },
-    { name: 'Group', href: '/', current: false },
+    // { name: 'Group', href: '/', current: false },
     { name: 'Testimonial', href: '#testimonial', current: false },
+    { name: 'ContacUs', href: '#contacUs', current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -45,6 +46,7 @@ const Navbar = () => {
     const [currentLink, setCurrentLink] = useState('/');
 
     const handleLinkClick = (href: string) => {
+        console.log(href)
         setCurrentLink(href);
     };
 
