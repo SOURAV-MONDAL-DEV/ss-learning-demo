@@ -3,7 +3,7 @@ import Companies from './components/Companies/Companies';
 import Courses from './components/Courses/index';
 import Mentor from './components/Mentor/index';
 import Testimonials from './components/Testimonials/index';
-import ContacUs from './components/ContacUs/ContacUs';
+import ContacUs from './components/ContactUs/ContactUs';
 import NextEnroll from './components/NextEnroll/NextEnroll';
 
 

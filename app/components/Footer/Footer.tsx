@@ -16,17 +16,17 @@ interface socialLinks {
 const socialLinks: socialLinks[] = [
     {
         imgSrc: '/assets/footer/facebook.svg',
-        link: 'www.facebook.com',
+        link: 'https://www.facebook.com/souravmondal.sourav.7311/',
         width: 10
     },
     {
         imgSrc: '/assets/footer/insta.svg',
-        link: 'www.instagram.com',
+        link: 'https://www.facebook.com/souravmondal.sourav.7311/',
         width: 14
     },
     {
         imgSrc: '/assets/footer/twitter.svg',
-        link: 'www.twitter.com',
+        link: 'https://www.facebook.com/souravmondal.sourav.7311/',
         width: 14
     },
 
@@ -98,7 +98,7 @@ const footer = () => {
             {/* All Rights Reserved */}
 
             <div className='py-10 md:flex items-center justify-between border-t border-t-gray-blue'>
-                <h4 className='text-dark-red opacity-75 text-sm text-center md:text-start font-normal'>@2023.E-learnings.All rights reserved</h4>
+                <h4 className='text-dark-red opacity-75 text-sm text-center md:text-start font-normal'>@2023.Sahaj Shekha. All rights reserved</h4>
                 <div className="flex gap-5 mt-5 md:mt-0 justify-center md:justify-start">
                     <h4 className='text-dark-red opacity-75 text-sm font-normal'><Link href="/" target="_blank">Privacy policy</Link></h4>
                     <div className="h-5 bg-dark-red opacity-25 w-0.5"></div>
