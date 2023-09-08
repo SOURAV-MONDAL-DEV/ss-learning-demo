@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Component } from "react";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Link from "next/link";
 
 
 function ContactUs() {
@@ -22,6 +23,36 @@ function ContactUs() {
     }
   };
 
+
+
+
+  interface socialLinks {
+    imgSrc: string;
+    link: string;
+    width: number;
+  }
+
+  const socialLinks: socialLinks[] = [
+    {
+      imgSrc: '/assets/footer/facebook.svg',
+      link: 'https://www.facebook.com/souravmondal.sourav.7311/',
+      width: 10
+    },
+    {
+      imgSrc: '/assets/footer/youtube.svg',
+      link: 'https://www.facebook.com/souravmondal.sourav.7311/',
+      width: 14
+    },
+    {
+      imgSrc: '/assets/footer/twitter.svg',
+      link: 'https://www.facebook.com/souravmondal.sourav.7311/',
+      width: 14
+    },
+
+  ]
+
+
+
   return (
     <>
       <div id="contacUs" className="mx-auto max-w-2xl md:max-w-7xl sm:rounded-3xl">
@@ -37,10 +68,10 @@ function ContactUs() {
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="mb-10 mx-3 flex flex-col md:flex-row justify-around gap-10">
                     <input className="w-full h-12 rounded-lg px-3" type="text" name="user_name" placeholder="Enter your NAME" />
-                    <input className="w-full h-12 rounded-lg px-3" type="email" name="user_email" placeholder="Enter your email address" />
+                    <input className="w-full h-12 rounded-lg px-3" type="email" name="user_email" placeholder="Enter your email address" required />
                   </div>
                   <div className="relative text-white focus-within:text-white flex flex-row-reverse rounded-lg pt-5 lg:pt-0">
-                    <input name="message" type="text" className="py-6 lg:py-8 text-sm md:text-lg w-full mx-3 text-black rounded-lg pl-8 focus:outline-none focus:text-black" placeholder="Enter your message" />
+                    <input name="message" type="text" className="py-6 lg:py-8 text-sm md:text-lg w-full mx-3 text-black rounded-lg pl-8 focus:outline-none focus:text-black" placeholder="Enter your message" required/>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-6 pt-5 lg:pt-0">
                       <button type="submit" className="p-3 lg:p-5 focus:outline-none focus:shadow-outline bg-ultramarine hover:bg-midnightblue duration-150 ease-in-out rounded-full">
                         <Image src={'/assets/newsletter/send.svg'} alt="send-icon" width={30} height={30} />
@@ -53,10 +84,12 @@ function ContactUs() {
           </div>
         </div>
       </div>
+
+      {/* More contact option */}
+
       <div className="text-center mt-10">
         <h2 className=" text-bold text-3xl">  More Contact Options</h2>
         <div className=" mt-5 md:flex items-center justify-center gap-5 text-xl">
-
           <div className="flex items-center justify-center gap-2 ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="lightgreen" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -70,8 +103,21 @@ function ContactUs() {
             </svg>
             <p> souravmondalcode@gmail.com</p>
           </div>
-
         </div>
+
+        <div className="flex justify-center items-center">
+          <h2 className="mx-2">Find Us On: </h2>
+          <div className='flex gap-4 mx-2'>
+          {socialLinks.map((items, i) => (
+            <Link href={items.link} key={i}>
+              <div className="bg-white h-12 w-12 shadow-xl text-base rounded-full flex items-center justify-center footer-icons hover:bg-ultramarine">
+                <Image src={items.imgSrc} alt={items.imgSrc} width={items.width} height={2} className="sepiaa" />
+              </div>
+            </Link>
+          ))}
+        </div>
+        </div>
+
       </div>
     </>
   );
