@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { Component } from "react";
+import { Component, useState } from "react";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Link from "next/link";
@@ -8,14 +8,20 @@ import Link from "next/link";
 
 function ContactUs() {
   const form = useRef<HTMLFormElement | null>(null);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    const MForm = e.target;
 
     if (form.current) {
       emailjs.sendForm('service_dmtulmb', 'template_ap2wf78', form.current, 'olyq2I1iF1OuD1Sel')
         .then((result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          setIsFormSubmitted(true);
+          form.current.reset(); // Reset the form
+          
         })
         .catch((error) => {
           console.log(error.text);
@@ -80,6 +86,7 @@ function ContactUs() {
                   </div>
                 </form>
               </div>
+              {isFormSubmitted && <p  className="text-center -mb-5 text-white">Your message has been sent!</p>}
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/Footer';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 export const metadata = {
@@ -19,17 +20,17 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         
-        <script
+        <Script
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         />
-        <script type="text/javascript">
+        <Script type="text/javascript">
           {`
             (function(){
                emailjs.init("olyq2I1iF1OuD1Sel");
             })();
           `}
-        </script>
+        </Script>
       </Head>
       <body>
         <Navbar />
