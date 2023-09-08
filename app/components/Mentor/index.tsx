@@ -15,12 +15,6 @@ interface DataType {
 
 const postData: DataType[] = [
     {
-        profession: 'Instructor, Sahaj Shekha',
-        name: 'Tanmay Mandal',
-        imgSrc: '/assets/mentor/tanmay.png',
-        fblink:'https://www.facebook.com/tanmoytheleg27',
-    },
-    {
         profession: 'Founder, Sahaj Shekha',
         name: 'Sourav Mondal',
         imgSrc: '/assets/mentor/sourav.jpeg',
@@ -49,6 +43,12 @@ const postData: DataType[] = [
         name: 'Kanika Mondal',
         imgSrc: '/assets/mentor/kanika.jpg',
         fblink: "https://www.facebook.com/profile.php?id=100076415333909",
+    },
+    {
+        profession: 'Instructor, Sahaj Shekha',
+        name: 'Tanmay Mandal',
+        imgSrc: '/assets/mentor/tanmay.png',
+        fblink:'https://www.facebook.com/tanmoytheleg27',
     },
 ]
 
