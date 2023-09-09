@@ -20,7 +20,9 @@ function ContactUs() {
         .then((result) => {
           // console.log(result.text);
           setIsFormSubmitted(true);
-          form.current.reset(); // Reset the form
+          if (form.current) {
+            form.current.reset(); // Reset the form
+          }
           
         })
         .catch((error) => {
