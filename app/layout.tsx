@@ -17,21 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script
-        id="email-js-cdn"
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-      />
-      <Script id='email-js-fn' type="text/javascript">
-        {`
-            (function(){
-               emailjs.init("olyq2I1iF1OuD1Sel");
-            })();
-          `}
-      </Script>
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body>
         <Navbar />
         {children}
